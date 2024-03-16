@@ -1,0 +1,9 @@
+char *HexToBinary(char *hex_string)
+{
+    int len = strlen(hex_string) / 2;
+    char *binary_data = (char *)malloc(len);
+
+    for (int i = 0; i < len; i++) sscanf(&hex_string[i * 2], "%2hhx", &binary_data[i]);
+
+    return binary_data;
+}
